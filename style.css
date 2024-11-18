@@ -1,0 +1,417 @@
+/*Fontes*/
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Protest+Strike&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+/*Cores*/
+:root {
+  --first-color: #fff;
+  --second-color: #000;
+  --third-color: #3f3f3f;
+  --forty-color: #e4e4e4;
+}
+
+/*Elementos base*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--second-color);
+}
+
+/*Header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 3px 4px var(--third-color);
+  padding: 1%;
+  background-color: var(--second-color);
+}
+
+header h1 {
+  color: var(--first-color);
+}
+
+header ul {
+  display: flex;
+  gap: 0.5rem;
+}
+
+header ul li {
+  list-style: none;
+  margin-left: 0.3rem;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-size: large;
+  color: var(--first-color);
+}
+header ul li a:hover {
+  color: var(--third-color);
+}
+#btnChamadaAcao {
+  padding: 0.4rem;
+  cursor: pointer;
+  border: none;
+  background-color: var(--third-color);
+  color: var(--first-color);
+  transition: 10ms;
+}
+#btnChamadaAcao:hover {
+  background-color: var(--forty-color);
+  color: var(--second-color);
+}
+header button {
+  color: var(--first-color);
+  font-size: 1.3rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 800px) {
+  #btnChamadaAcao {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    display: grid;
+  }
+  header h1 {
+    margin: 0.5rem;
+  }
+  header ul {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    display: none;
+    margin: 0.5rem;
+  }
+  header ul a {
+    font-size: large;
+  }
+  header button {
+    grid-column-start: 12;
+    grid-row: 1;
+    display: block;
+    margin: 0.5rem;
+  }
+}
+
+.ocultar {
+    display: none;
+}
+
+.mostrar {
+    display: block;
+}
+/*Carrossel*/
+
+.swiper {
+  margin: 0.5rem;
+  width: 100%;
+  height: 500px;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: var(--second-color);
+  color: var(--first-color);
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.swiper-slide h1 {
+  margin: 5rem;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.swiper-slide img {
+  position: absolute;
+  left: 30%;
+  top: 1%;
+}
+
+.swiper-slide ul {
+  color: var(--first-color);
+  list-style: none;
+  margin-left: 5rem;
+  margin-top: 15rem;
+  font-family: "Tilt Neon", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "XROT" -0, "YROT" 0;
+}
+
+.seta {
+  color: var(--first-color) !important;
+  opacity: 0.5;
+}
+.seta:hover {
+  color: var(--third-color) !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet {
+  border: 1px solid var(--first-color);
+}
+.swiper-pagination-bullet:hover {
+  background-color: var(--third-color);
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--first-color) !important;
+}
+
+@media (max-width: 600px) {
+  .swiper {
+    width: 100%;
+    height: 500px;
+  }
+
+  .swiper-slide {
+    font-size: 15px;
+  }
+
+  .swiper-slide h1 {
+    margin: 5rem;
+    margin-top: 8;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .swiper-slide img {
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    width: 300px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper {
+    width: 100%;
+    height: 500px;
+  }
+
+  .swiper-slide {
+    font-size: 15px;
+  }
+
+  .swiper-slide h1 {
+    margin: 5rem;
+    margin-top: 8;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .swiper-slide img {
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    width: 300px;
+    height: auto;
+  }
+}
+
+/*Sobre*/
+
+#container-sobre {
+  color: var(--first-color);
+  margin: 2rem;
+  display: flex;
+}
+
+#container-sobre div {
+  background-color: var(--third-color);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#container-sobre h1 {
+  margin-bottom: 1rem;
+}
+#container-sobre p {
+  text-align: justify;
+}
+
+@media (max-width: 800px) {
+  #container-sobre {
+    flex-direction: column;
+  }
+ 
+}
+
+@media (max-width: 480px) {
+  #container-sobre {
+    flex-direction: column;
+    font-size: 10px;
+  }
+}
+
+/*Produtos*/
+
+#container-produtos {
+  color: var(--first-color);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin: 1rem;
+}
+
+#container-produtos div {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#container-produtos div img {
+  width: 200px;
+  height: auto;
+}
+
+@media (max-width: 725px) {
+  #container-produtos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Testemunhos*/
+
+#container-testemunhos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2rem;
+  gap: 1rem;
+  color: var(--second-color);
+}
+
+#container-testemunhos div {
+  background-color: var(--first-color);
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#container-testemunhos div img {
+  border-radius: 50%;
+  border: 1px solid var(--third-color);
+  width: 130px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  #container-testemunhos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Contato*/
+#container-contato {
+  color: var(--first-color);
+  background-color: var(--third-color);
+  margin: 1rem;
+  padding: 1rem;
+}
+#container-contato form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#container-inputs {
+  display: grid;
+  grid-template-areas:
+    "nome telefone"
+    "email email"
+    "mensagem mensagem";
+  gap: 0.2rem;
+  margin: 1rem;
+}
+
+#container-inputs input,
+textarea {
+  padding: 0.5rem;
+}
+
+#inputNome {
+  grid-area: nome;
+}
+
+#inputEmail {
+  grid-area: email;
+}
+
+#inputTelefone {
+  grid-area: telefone;
+}
+
+#inputMensagem {
+  grid-area: mensagem;
+}
+
+#container-contato form button {
+  padding: 0.2rem;
+  margin: 1rem;
+  font-size: large;
+  font-weight: bolder;
+  border: none;
+  border-radius: 2%;
+  cursor: pointer;
+  background-color: var(--second-color);
+  color: var(--first-color);
+  transition: 55ms;
+}
+
+#container-contato form button:hover {
+  background-color: var(--forty-color);
+  color: var(--second-color);
+}
+
+@media (max-width: 600px) {
+  #container-inputs {
+    grid-template-areas:
+      "nome"
+      "telefone"
+      "email"
+      "mensagem";
+  }
+}
+
+/*Footer*/
+footer {
+  color: var(--forty-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+footer div {
+  margin: 0.5rem;
+}
+
+footer div a {
+  padding: 0.5rem;
+  color: var(--third-color);
+  transition: 10ms;
+}
+footer div a:hover {
+  color: var(--first-color);
+}

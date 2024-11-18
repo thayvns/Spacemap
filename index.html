@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceMap</title>
+
+    <!--Link do CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!--Link do Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Link AOS.js -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--EmailJS-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "ifA-M8dr0Pu7vBW8f",
+        });
+      })();
+    </script>
+</head>
+<body>
+    <header>
+        <h1>SpaceMap</h1>
+
+        <ul id="ulMenu">
+            <li><a href="#container-sobre">Sobre</a></li>
+            <li><a href="#container-produtos">Produtos</a></li>
+            <li><a href="#container-testemunhos">Testemunhos</a></li>
+            <li><a href="#container-contato">Contato</a></li>
+        </ul>
+
+        <a href="#container-contato"><input id="btnChamadaAcao" type="button" value="Entre em Contato"></a>
+        <button id="btnMenu"><i class="fa-solid fa-bars"></i></button>
+    </header>
+
+    <section id="container-carrossel">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h1>Reverence</h1>
+                <img src="./src/imgs/reverence-spaceship.png" alt="Nave espacial Reverence, modelo bélico mais atual da empresa SpaceMap ">
+                <ul>
+                  <li>Lançamento: 2057</li>
+                  <li>Capacidade: 25 vidas</li>
+                  <li>Hiperespaço: 3ª geração</li>
+                  <li>Autonomia: 12 a.l.</li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <h1>Apology</h1>
+                <img src="./src/imgs/apology-spaceship.png" alt="Nave espacial Apology, modelo mercante da empresa SpaceMap">
+                <ul>
+                  <li>Lançamento: 2056</li>
+                  <li>Capacidade: 50 vidas</li>
+                  <li>Hiperespaço: 2ª geração</li>
+                  <li>Autonomia: 7 a.l.</li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <h1>Aurora</h1>
+                <img src="./src/imgs/aurora-spaceship.png" alt="Nave espacial Aurora, modelo de transporte da empresa SpaceMap ">
+                <ul>
+                  <li>Lançamento: 2057</li>
+                  <li>Capacidade: 1500 vidas</li>
+                  <li>Hiperespaço: 3ª geração</li>
+                  <li>Autonomia: 5 a.l.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-button-next seta"></div>
+            <div class="swiper-button-prev seta"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+
+
+    </section>
+
+    <section id="container-sobre">
+      <img src="./src/imgs/sede-spacemap.jpg" alt="Sede da SpaceMap">
+      <div>
+        <h1>SpaceMap: Inovação e Liderança na Exploração Espacial</h1>
+        <p>
+          Fundada em 2046 pela bilionária Marlo Andróva, a SpaceMap se tornou uma 
+          líder global no desenvolvimento de naves espaciais para transporte, 
+          comércio, pesquisa e fins bélicos. Em 2051, a empresa lançou a nave 
+          Falcon, um sucesso de vendas que deu início à "Era da Exploração 
+          Espacial", transformando a humanidade e abrindo novas fronteiras 
+          no cosmos.
+          Utilizando a teoria de Gustav Levandovisk como base, a SpaceMap 
+          integra suas próprias inovações tecnológicas para criar naves com 
+          desempenho incomparável. Seu impacto na exploração espacial e no 
+          status atual da humanidade é indiscutível, consolidando a empresa 
+          como um pilar essencial para o futuro da civilização interplanetária.
+          
+        </p>
+      </div>
+    </section>
+
+    <section id="container-produtos">
+      <div class="card-produto">
+        <img src="./src/imgs/reverence-spaceship.png" alt="Nave espacial Reverence, modelo bélico mais atual da empresa SpaceMap ">
+        <h1>Reverence</h1>
+        <p>A Reverence, lançada em 2057, é uma nave bélica de alta tecnologia, com capacidade para 25 tripulantes e hiperespaço de terceira geração. Com autonomia de 12 anos-luz, está preparada para missões profundas e operações em áreas hostis, combinando mobilidade estratégica e sistemas de defesa avançados.</p>      
+      </div>
+      <div class="card-produto">
+
+        <img src="./src/imgs/apology-spaceship.png" alt="Nave espacial Apology, modelo mercante da empresa SpaceMap">
+        <h1>Apology</h1>
+        <p>A Apology, lançada em 2056 pela SpaceMap, é uma nave mercante projetada para operações comerciais em sistemas distantes. Com capacidade para 50 tripulantes e tecnologia de hiperespaço de segunda geração, ela oferece um equilíbrio entre eficiência e autonomia, alcançando até 7 anos-luz de distância. Confortável e segura, a Apology é ideal para viagens de longa duração, combinando confiabilidade com a infraestrutura necessária para atender a demandas comerciais interestelares.</p>      
+      
+
+      </div>
+      <div class="card-produto">
+
+        <img src="./src/imgs/aurora-spaceship.png" alt="Nave espacial Aurora, modelo de transporte da empresa SpaceMap ">
+        <h1>Aurora</h1>
+        <p>A Aurora, lançada em 2057 pela SpaceMap, é uma nave de transporte de grande porte, projetada para deslocar até 1.500 passageiros com segurança e eficiência. Com tecnologia de hiperespaço de terceira geração, a Aurora tem autonomia de 5 anos-luz, ideal para viagens interestelares de média distância. Concebida para oferecer conforto e segurança, é uma opção confiável para o transporte de grandes grupos em missões e rotas regulares pelo espaço.</p>      
+      
+
+      </div>
+    </section>
+
+    <section id="container-testemunhos" >
+      <div class="card-comentarios" data-aos="fade-up" >
+        <img src="./src/imgs/empresario-generico.jpg" alt="foto depoimento">
+        <h3>Thomas Slater</h3>
+        <p>
+          A aquisição da Aurora foi uma grande acerto para nossa corporação. Uma excelente nave de transporte.
+        </p>
+       
+      </div>
+      <div class="card-comentarios" data-aos="fade-up">
+        <img src="./src/imgs/mulherdenegocios.jpg" alt="Santjin Romanoff">
+        <h3>Santjin Romanoff</h3>
+        <p>
+          A Apology foi fundamental para a mineração da lua Cantaratas, trouxemos muitos minerais importante para a Terra com essa incrível espaçonave.
+        </p>
+       
+      </div>
+      <div class="card-comentarios" data-aos="fade-up">
+        <img src="./src/imgs/mulherdepoimento.jpg" alt="Djmila Orvalho">
+        <h3>Djamila Orvalho</h3>
+        <p>
+          A aquisição da Reverence foi de fundamental importância para a defesa da Estação Duradouro-415, resistiu ao pavoroso ataque Liberiano.
+        </p>
+       
+      </div>
+     
+
+    </section>
+
+    <section id="container-contato">
+      <form id="formulario-contato">
+        <h1>Contact Us</h1>
+        <p>Envie uma mensagem em caso de dúvidas</p>
+      
+        <div id="container-inputs">
+            <input id="inputNome" type="text" name="nome" placeholder="Digite nome" required>
+        
+            <input id="inputEmail"  type="email" name="email" placeholder="Digite email" required>
+            
+            <input id="inputTelefone"  type="text" name="telefone" placeholder="Digite telefone" required>
+            <textarea id="inputMensagem"  name="mensagem" cols="30" rows="10" placeholder="Digite mensagem" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <footer>
+      <div>
+        <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-bluesky"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+
+      <p>© Todos os direitos reservados - ThayVNS com apoio +PraTI</p>
+    </footer>
+
+     <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <!--JS AOS.js-->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--JS INTERNO-->
+    <script src="main.js"></script>
+   
+</body>
+</html>
